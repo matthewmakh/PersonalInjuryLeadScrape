@@ -1,17 +1,19 @@
+import File_2
+
 #!/usr/bin/env python
 # coding: utf-8
 
 # In[1]:
 
 
-api_key = 'd05ade6f74865817bb0abc0ec55eff38'  # 2Captcha API
+api_key = File_2.api_key  # 2Captcha API
 
 DATE_ = '07082024'
 
 COUNTY = 'MIAMI-DADE'
 
 ''' begin county options
-pehdor-cUwpax-7fehfo
+
 Alachua
 Baker
 Bay
@@ -235,11 +237,11 @@ while i < len(Last_names):
                 def solve(f):
                     with open(f, "rb") as image_file:
                         encoded_string = base64.b64encode(image_file.read()).decode('ascii')
-                        url = 'https://api.apitruecaptcha.org/one/gettext'
+                        url = File_2.url1
 
                         data = {
-                            'userid': 'scholarpon@gmail.com',
-                            'apikey': 'd9AAJFWfGT9iLMTHljk5',
+                            'userid': File_2.userid,
+                            'apikey': File_2.apikey2,
                             'data': encoded_string
                         }
                         response = requests.post(url=url, json=data, timeout=30)
